@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Belajar Cookies</title>
+	<link rel="stylesheet" type="text/css" href="TypeWriting.js-master/src/main.css">
+	<script type="text/javascript">
+	var nama_user ="";
+	function awal_load(){
+	nama_user = prompt('Masukkan nama anda');
+	document.cookie = 'nama_user='+nama_user+";"+"path=/";
+	array_cookie = document.cookie.split("=");
+}
+	function cek_cookie(){
+		array_cookie = document.cookie.split("=");
+		if(array_cookie[1]){
+			alert("hai "+array_cookie[1]);
+			var regular_expression = /[^a]/g;
+			hasil = array_cookie[1].match(regular_expression);
+			alert(hasil);
+		}else{
+			awal_load();
+		}
+	}
+
+
+	</script>
+</head>
+<body onload="cek_cookie();">
+	<p></p>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Belajar CSS</title>
+	</head>
+	<style type="text/css">
+		.box-atas, .box-bawah{
+			width: 300px;
+			height: 300px;
+			border: 10px  solid black;
+			margin: 30px;
+			display: inline-block;
+		}
+		
+		.box-atas{
+		background-color: black;
+		margin-bottom: -40px;	
+		
+		}
+
+		.box-bawah{
+			background-color: white;
+		}
+
+		.box-putih{
+			width: 600px;
+			height: 200px;
+			padding-bottom: 100px;
+			background-color: black;
+			border:10px solid;
+			border-color: white;
+		}
+	</style>
+	
+	<noscript>
+         Sorry...JavaScript is needed to go ahead.
+    </noscript>
+	
+	<body>
+	<div class="box-atas" id="pump" style="z-index:2;">
+		Pump
+		<div class="box-putih">
+		
+
+		</div>
+	</div>
+
+	<div class="box-atas" style="z-index:1;">
+		Pump
+		<div class="box-putih">
+			
+		</div>
+	</div>
+
+	<div class="box-atas">
+		Pump
+		<div class="box-putih" style="z-index:3">
+			
+		</div>
+	</div>
+	<br>
+	<div class="box-bawah">
+		
+	</div>
+
+	<div class="box-bawah">
+		
+	</div>
+
+	<div class="box-bawah">
+		
+		
+	</div>
+	</body>
+</html>

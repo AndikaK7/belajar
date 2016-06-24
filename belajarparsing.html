@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Belajar Parsing XML</title>
+</head>
+<script type="text/javascript" src="TypeWriting.js-master/src/jquery-1.12.3.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var nama_murid ="";
+		var kelas_murid = "";
+		var jurusan_murid = "";
+		$.ajax({
+			url: 'test.xml',
+			type: 'POST',
+			dataType: 'xml',
+			//kalau sukses ajaxnya, akan menjalankan success:function
+			
+			success:function(xml){
+				//find('murid') disini itu nyari node murid
+				$(xml).find('murid').each(function(){
+				//udah nyari node murid, nyari lagi node nama didalam murid
+					$(this).find('nama').each(function(){
+						nama_murid = $(this).text();
+						console.log(nama_murid);
+					});			
+				});
+			}
+		})
+		.done(function() {
+			console.log("success");
+		})
+		.fail(function() {
+			console.log("error");
+		})
+		.always(function() {
+			console.log("complete");
+		});
+
+	});
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+<sekolah>
+	<murid>
+		<nama>Andika K</nama>
+		<kelas>13</kelas>
+		<jurusan>TI</jurusan>
+	</murid>	
+
+	<murid>
+		<nama>John</nama>
+		<kelas>12</kelas>
+		<jurusan>TI</jurusan>
+	</murid>	
+</sekolah>
